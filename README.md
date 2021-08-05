@@ -20,8 +20,8 @@
  在java的spring应用程序系统中会很简单的就把data-log引入到系统中，在我们的maven依赖中加入
  
 ``` 
-    <dependency>
- 		 <groupId>com.aven</groupId>
+    		<dependency>
+ 		 	<groupId>com.aven</groupId>
 	 		<artifactId>data-log</artifactId>
 	 		<version>1.0.2</version>
 	 	</dependency>
@@ -31,7 +31,13 @@
  
  `aven.data-log.open=true`  默认是开启的
  
- 也可以关闭某些表的记录
+ 1.可以关闭某些url的记录
  
- `aven.data-log.close.url=/mine/*` 关闭形如/mine/xxx的url的记录
+ `aven.data-log.close.url=/mine/*;/user/*` 关闭形如/mine/xxx的url的记录
+ 
+ 2.可以关闭某些表的记录
+ 
+ `aven.data-log.close.table=dl_user;dl_work` 只要填入表名即可
+ 
+ 
  
